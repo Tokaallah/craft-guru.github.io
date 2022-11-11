@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// YOGA BOOKS PAGE
+// -----------------------------------------------------------------------------
+.yoga-books{
+
+    .yoga-books-mobile{
+
+        .yoga-book-card{
+            width: 21%;
+
+            figure{
+                width: 100%;
+                height: 300px;
+                margin: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    &:hover{
+                        filter: hue-rotate(45deg);
+                    }
+                }
+            }
+
+            .book-title{
+                text-decoration: none;
+                color: $accent-color;
+                font-size: 2em;
+
+                &:hover{
+                    color: $secondary-color;
+                    text-decoration: underline;
+                }
+            }
+
+            .download-btn{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// YOGA BOOKS PAGE RTL
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// YOGA BOOKS PAGE RESPONSIVE
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 950px){
+    .yoga-books .yoga-books-mobile .yoga-book-card {
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .yoga-books .yoga-books-mobile .yoga-book-card {
+        width: 44%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .yoga-books .yoga-books-mobile .yoga-book-card {
+        width: 100%;
+    }
+}

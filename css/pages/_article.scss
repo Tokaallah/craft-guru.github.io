@@ -1,0 +1,197 @@
+// -----------------------------------------------------------------------------
+// ARTICLE PAGE
+// -----------------------------------------------------------------------------
+.article-page{
+    .center-max-width{
+        .article-mobile{
+            .article-column{
+                width: 70%;
+
+                .article{
+                    background-color: #ffffff;
+                    @include border-radius(3px);
+    
+                    .article-details{
+                        i{
+                            color: $accent-color;
+                            font-size: 1.1em;
+                        }
+    
+                        span{
+                            font-size: 1.1em;
+                            color: $accent-color;
+    
+                            a{
+                                font-size: 1.1em;
+                                text-decoration: none;
+                                color: $accent-color;
+    
+                                &:hover{
+                                    color: $primary-color;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+    
+                    figure{
+                        width: 100%;
+                        height: 400px;
+                        margin: 0;
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        figcaption {
+                            color: $tertiary-color;
+                            font-style: italic;
+                            text-align: center;
+                          }
+                    }
+    
+                    article{
+                        p{
+                            color: $accent-color;
+                        }
+                    }
+    
+                    .share-article{
+                        a{
+                            color: $secondary-color;
+                            font-size: 1.3em;
+    
+                            i{
+                                font-size: 1.3em;
+                            }
+    
+                            &:hover{
+                                color: $accent-color;
+                            }
+                        }
+                    }
+                }
+
+                .related-articles{
+                    width: 100%;
+
+                    .article-card{
+                        width: 32%;
+                        background-color: #ffffff;
+                        @include border-radius(3px);
+                        text-align: center;
+
+                        figure{
+                            width: 100%;
+                            height: 150px;
+                            margin: 0;
+                            @include border-radius(3px);
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                @include border-radius(3px);
+                            }
+                        }
+
+                        a{
+                            text-decoration: none;
+
+                            h2{
+                                &:hover{
+                                    color: $primary-color-light;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .comments{
+            width: 100%;
+
+            .comment-card{
+                width: 100%;
+                background-color: #ffffff;
+                @include border-radius(3px);
+
+                figure{
+                    width: 120px;
+                    height: 120px;
+                    margin: 0;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                form{
+                    width: 80%;  
+                    
+                    .name{
+                        color: $primary-color;
+                    }
+                }
+
+                .comment-details{
+                    width: 80%;
+
+                    .name{
+                        color: $primary-color;
+                        font-size: 1.5em;
+                    }
+    
+                    .comment{
+                        font-size: 1.2em;
+                        columns: $accent-color;
+                    }
+                } 
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// ARTICLE PAGE RTL
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// ARTICLE PAGE RESPONSIVE
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 950px){
+    .article-page .center-max-width .article-mobile{
+        flex-direction: column;
+    }
+    
+    .article-page .center-max-width .article-mobile .article-column {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .article-page .center-max-width .article-mobile .article-column .related-articles .article-card {
+        width: 48%;
+        
+        &:nth-child(3n+3){
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .article-page .center-max-width .article-mobile .article-column .related-articles .article-card {
+        width: 100%;
+
+        &:nth-child(3n+2){
+            display: none;
+        }
+    }
+}
+

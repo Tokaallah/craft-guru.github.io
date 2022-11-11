@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------
+.footer{
+    background-color: #ffffff;
+    margin-top: 250px;
+    .container{
+        
+        .footer-bg{
+            width: 30%;
+            height: 290px;
+            background-size: contain !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            position: absolute;
+            left: 36%;
+            z-index: 0;
+            padding-top: 285px;
+            margin-top: -285px;
+        }
+
+        .footer-about{
+            width: 30%;
+            text-align: center;
+
+            .logo{
+                width: 200px;
+
+                img{
+                    width: 200px;
+                }
+            }
+
+            a{
+                i{
+                    font-size: 2em;
+                    color: $tertiary-color-light;
+
+                    &:hover{
+                        color: $tertiary-color;
+                    }
+                }
+            }
+        }
+
+        .footer-links{
+            width: 30%;
+            text-align: center;
+
+            a{
+                text-decoration: none;
+                color: $accent-color;
+                font-size: 1.8em;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $secondary-color;
+                    @include transition;
+                }
+            }
+        }
+        .footer-send-msg{
+            width: 30%;
+            text-align: center;
+
+            form{
+
+                .msg-row{
+                    width: 100%;
+
+                    textarea{
+                        width: 100%;
+                    }
+                }
+                
+                .btn-row{
+                    width: 100%;
+
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyrigths-container{
+        background-color: $accent-color;
+
+        p{
+            color: #ffffff;
+
+            a{
+                text-decoration: none;
+                color: $tertiary-color-light;
+
+                &:hover{
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FOOTER (RTL)
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// FOOTER (RESPONSIVE)
+// -----------------------------------------------------------------------------

@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// BREADCRUMB
+// -----------------------------------------------------------------------------
+.breadcrumb{
+    background: rgba(117,188,181, 0.1);
+
+    .breadcrumb-bg{
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain!important;
+        width: 200px;
+        height: 200px;
+    }
+
+    .center-max-width{
+        position: relative;
+        overflow: hidden;
+
+        .brand-decoration{
+            position: absolute;
+            width: auto;
+            height: 100%;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.05;
+        }
+    }
+
+    .page-title{
+        font-size: 2.2em;
+        font-weight: 600;
+        color: $primary-color;
+        position: relative;
+    }
+
+    nav{
+        position: relative;
+        
+        a{
+            text-decoration: none;
+            font-size: 1.8em;
+            font-weight: 500;
+            color: $accent-color;
+            line-height: 30px;
+            @include transition;
+
+            &.active{
+                font-weight: 600;
+                text-decoration: underline;
+                color: $secondary-color;
+            }
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+
+        i{
+            font-size: 1.2em;
+            color: $accent-color;
+            line-height: 30px;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BREADCRUMB (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .breadcrumb{
+        .center-max-width{
+            .brand-decoration{
+                right: 0px;
+                left: auto;
+            }
+        }
+    
+        .page-title{
+            font-size: 1.8em;
+        }
+    
+        nav{
+            a{
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BREADCRUMB (RESPONSIVE)
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 1330px){
+    .breadcrumb{
+        margin-top: 70px;
+    }
+}

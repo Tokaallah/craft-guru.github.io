@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// ARTICLES PAGE
+// -----------------------------------------------------------------------------       
+.articles-page{
+
+    .masonry-wrapper {
+        padding: 1.5em;
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .masonry {
+            columns: 1;
+            column-gap: 15px;
+
+            .masonry-item {
+                display: inline-block;
+                vertical-align: top;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                overflow: hidden;
+                filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+                transition: filter .25s ease-in-out;
+                color: $accent-color;
+                background-color: #ffffff;
+
+                .masonry-content {
+                    border-radius: 3px;
+                    overflow: hidden;
+
+                    img, video {
+                        max-width: 100%;
+                        width: 100%;
+                        vertical-align: middle;
+                    }
+
+                    a{
+                        text-decoration: none;
+
+                        .masonry-title {
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                            padding: 1rem 1.5rem;
+
+                            &:hover{
+                                color: $primary-color;
+                            }
+                        }                        
+                    }
+
+                    .masonry-description {
+                        margin: 0;
+                        padding: 1.5rem;
+                        font-size: .75rem;
+                        border-top: 1px solid rgba(0, 0, 0, .05);
+                    }
+
+                    .share-links{
+                        text-decoration: none;
+                        font-size: 2em;
+                        
+                        i{
+                            color: $tertiary-color;
+
+                            &:hover{
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// ARTICLES PAGE (RTL)
+// -----------------------------------------------------------------------------
+    
+// -----------------------------------------------------------------------------
+// ARTICLES PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 1023px) and (min-width: 768px) {  
+    .masonry {
+        columns: 2 !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .masonry {
+        columns: 3 !important;
+    }
+}

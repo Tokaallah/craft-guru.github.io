@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// FEEDS COLUMN
+// -----------------------------------------------------------------------------
+.feeds-col{
+    width: 28%;
+
+    .fb-page{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include box-shadow(0px, 0px, 15px, 0px, rgba(94,94,94,0.15));
+
+        
+        .fb_iframe_widget_fluid span {
+            height: 500px;
+            width: 100% !important;
+        }
+        
+        .fb_iframe_widget iframe {
+            width: 100% !important;
+        }
+    
+        ._2p3a{
+            width: 100%;
+        }
+
+        .fb_iframe_widget_fluid span {
+            height: 500px;
+            width: 100% !important;
+            min-width: 100% !important;
+        }
+        
+        .fb_iframe_widget iframe {
+            width: 100% !important;
+        }
+    
+        ._2p3a{
+            width: 100% !important;
+            min-width: 100% !important;
+        }
+
+        ._2zfs {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%) !important;
+        }
+    }
+
+    .recent-posts{
+
+        .post-card{
+            background-color: #ffffff;
+            @include border-radius(3px);
+
+            figure{
+                width: 35%;
+                height: 150px;
+                margin: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @include border-radius(3px);
+                }
+            }
+
+            .article-title{
+                width: 58%;
+
+                a{
+                    text-decoration: none;
+                    color: $secondary-color;
+                    font-size: 1.8em;
+
+                    &:hover{
+                        color: $tertiary-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FEEDS COLUMN RTL
+// -----------------------------------------------------------------------------
+.feeds-col .recent-posts .post-card .article-title {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+// -----------------------------------------------------------------------------
+// FEEDS COLUMN RESPONSIVE
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 950px){
+    .articles-column,
+    .feeds-col {
+        width: 100%;
+    }
+
+    .feeds-col .fb-page{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .ad-section img{
+        width: 250px;
+    }
+}

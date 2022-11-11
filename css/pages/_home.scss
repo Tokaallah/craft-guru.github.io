@@ -1,0 +1,728 @@
+// -----------------------------------------------------------------------------
+// HOMEPAGE
+// -----------------------------------------------------------------------------
+html{
+    background-color: #FFFCE2;
+}
+    // -----------------------------------------------------------------------------
+    // INTRO
+    // -----------------------------------------------------------------------------
+    .homepage-intro{
+        height: 100vh;
+        .left-side-img{
+                width: 25%;
+                height: 730px;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                @include transition;
+        }
+        .intro-heading{
+            width: 50%;
+        }
+        .right-side-img{
+            width: 25%;
+            height: 700px;
+            background-size: cover !important;
+            background-position: 0px center!important;
+            background-repeat: no-repeat !important;
+            padding-bottom: 300px;
+            margin-bottom: -300px;        
+            @include transition;
+        }
+    }
+    // -----------------------------------------------------------------------------
+    // ABOUT
+    // -----------------------------------------------------------------------------
+    .homepage-about{
+        
+        .homepage-about-title {
+            font-size: 3.5em;
+        }
+        .about-img{
+            width: 48%;
+
+            img{
+                width: 500px;
+                z-index: 1;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 340px;
+                height: 340px;
+                border-radius: 50%;
+                background-color: $tertiary-color;
+                opacity: 0.7;
+                z-index: 0;
+            }
+        }
+
+        .about-desc{
+            width: 48%;
+            background-color: #ffffff;
+            @include border-radius(5px);
+        }
+    }
+    // -----------------------------------------------------------------------------
+    // SPIRIT
+    // -----------------------------------------------------------------------------
+    .homepage-spirit{
+        .gallery{
+            width: 55%;
+
+            .spirit-bg{
+                width: 14%;
+                height: 520px;
+                background-size: cover !important;
+                background-position: center center !important;            
+                background-repeat: no-repeat !important;
+                position: absolute;
+                left: 0;
+                z-index: 0;
+            }
+
+            .food-bg{
+                width: 28%;
+                height: 615px;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                position: absolute;
+                left: 0;
+                z-index: 0;
+                padding-top: 125px;
+                margin-top: -125px;
+            }
+
+            .treatment-bg{
+                width: 30%;
+                height: 520px;
+                background-size: cover !important;
+                background-position: center center !important;            
+                background-repeat: no-repeat !important;
+                position: absolute;
+                right: 0;
+                z-index: 0;
+            }
+
+            .diy-bg{
+                width: 30%;
+                height: 716px;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                position: absolute;
+                right: 0;
+                z-index: 0;
+                padding: -200px;
+                padding-top: 200px;
+                margin-top: -200px;
+            }
+            
+            ul{
+                
+                li{
+                    height: 40vh;
+                    flex-grow: 1;
+                    overflow: hidden;
+                    z-index: 1;
+                    position: relative;
+                    flex-grow: 0;
+
+                    &.vertical-img{
+                        width: 200px;
+                    }
+
+                    &.horizontal-img{
+                        height: 20vh !important;
+
+                        &.large{
+                            width: 410px;
+                        }
+
+                        &.small{
+                            width: 200px;
+                        }
+                    }
+                    
+                    img{
+                        max-height: 100%;
+                        min-width: 100%;
+                        object-fit: cover;
+                        vertical-align: bottom;
+                    }
+                    
+                    .spirit-hover-links{
+                        position: relative;
+                        height: 100%;
+
+                        .article-desc{
+                            position: absolute;
+                            text-align: center;
+                            background: rgba(0,0,0,0.5);
+                            padding-left: 1em;
+                            padding-right: 1em;
+                            width: 101%;
+                            bottom: 50%;
+                            height: 100%;
+                            left: 50%;
+                            opacity: 0;
+                            -webkit-transform: translate(-50%, -50%);
+                            -moz-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);  
+                            @include transition;                          
+
+                            &:hover{
+                                opacity: 1;
+                            }     
+                            
+                            .desc{
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                @include transition;
+
+                                p{
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .spirit-desc{
+            width: 40%;
+
+            .spirit-title{
+                font-size: 6em;               
+            }
+
+            ul{
+                li{
+                    a{
+                        text-decoration: none;
+                        font-size: 2.5em;
+                        color: $accent-color;
+
+                        &:hover{
+                            text-decoration: underline;
+                            color: $primary-color;
+                            @include transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // -----------------------------------------------------------------------------
+    // SUBSCRIBE
+    // -----------------------------------------------------------------------------
+    .homepage-subscribe{
+        .subscribe-bg{
+            width: 100%;
+            height: 400px;
+            background-size: cover !important;
+            background-position: center center !important;            
+            background-repeat: no-repeat !important;
+            position: absolute;
+            right: 0;
+            z-index: 0;
+        }
+
+        .subscribe-form{
+            height: 400px;
+            .form-desc{
+                z-index: 1;
+                background-color: #ffffff;
+                padding: 50px 80px;
+                @include border-radius(3px);
+                
+                form{
+                    width: 100%;
+                    
+                    .btn{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    // -----------------------------------------------------------------------------
+    // TRENDING ARTICLES
+    // -----------------------------------------------------------------------------
+    .homepage-articles{
+        background-color: rgba(194,215,208, 0.1);
+
+        .articles-col{
+            width: 68%;
+
+            article{
+                .article-card{
+                    background-color: #ffffff;
+                    @include box-shadow(0px, 0px, 15px, 0px, rgba(94,94,94,0.15));
+
+                    figure{
+                        width: 250px;
+                        height: 250px;
+                        margin: 0;
+
+                        img{
+                            width: inherit;
+                            height: inherit;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .article-desc{
+                        height: 250px;
+
+                        h4{
+                            a{
+                                text-decoration: none;
+                                color: $primary-color;
+
+                                &:hover{
+                                    color: $primary-color-light;
+                                }
+                            }
+                        }
+
+                        .date{
+                            color: $secondary-color;
+                            font-size: 1.2em;
+                        }
+                        
+                        .tag{
+                            color: $tertiary-color-light;
+                            font-size: 1.6em;
+
+                            a{
+                                text-decoration: none;
+                                color: $tertiary-color-light;
+
+                                &:hover{
+                                    color: $tertiary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            :last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer{
+        .footer-send-msg{
+            .form-row{
+                &.name-row,
+                &.email-row{
+                    width: 49%;
+                }
+            }
+        }
+    }
+// -----------------------------------------------------------------------------
+// HOMEPAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+        // -----------------------------------------------------------------------------
+    // INTRO
+    // -----------------------------------------------------------------------------
+    .homepage-intro{
+        height: 100vh;
+        .left-side-img{
+            transform: scale(-1, 1);
+        }
+
+        .right-side-img{
+            transform: scale(-1, 1);
+        }
+    }
+    // -----------------------------------------------------------------------------
+    // SPIRIT
+    // -----------------------------------------------------------------------------
+    .homepage-spirit{
+        .gallery{
+    
+            .spirit-bg{
+                left: auto;
+                right: 0;
+                transform: scale(-1, 1);
+            }
+
+            .food-bg{
+                left: auto;
+                right: 0;
+                transform: scale(-1, 1);
+            }
+
+            .treatment-bg{
+                right: auto;
+                left: 0;
+                transform: scale(-1, 1);
+            }
+
+            .diy-bg{
+                right: auto;
+                left: 0;
+                transform: scale(-1, 1);
+            }
+        }
+    }          
+}
+
+// -----------------------------------------------------------------------------
+// HOMEPAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 1500px){
+    .homepage-spirit .gallery ul li.vertical-img,
+    .homepage-spirit .gallery ul li.horizontal-img.small {
+        width: 160px;
+        @include transition;
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.large {
+        width: 330px;
+        @include transition;
+    }
+
+    .homepage-subscribe .subscribe-form .form-desc {
+        text-align: center;
+    }
+
+    .footer .container .footer-send-msg .name-row,
+    .footer .container .footer-send-msg .email-row {
+        width: 100%;
+        @include transition;
+    }
+
+    .footer .copyrigths-container {
+        text-align: center;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 1450px){
+    .homepage-intro .left-side-img {
+        width: 23%;
+        height: 645px;
+        @include transition;
+    }
+}
+
+@media only screen and (max-width: 1330px){
+    .homepage-intro .left-side-img {
+        width: 23%;
+        height: 525px;
+        @include transition;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .homepage-spirit .gallery ul li.vertical-img, 
+    .homepage-spirit .gallery ul li.horizontal-img.small {
+        width: 145px;
+        @include transition;
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.large {
+        width: 300px;
+        @include transition;
+    }
+
+    .homepage-spirit .gallery .spirit-bg {
+        width: 14%;
+        height: 440px;
+    }
+
+    .homepage-spirit .gallery .treatment-bg {
+        width: 30%;
+        height: 480px;
+    }
+
+    .homepage-spirit .gallery .diy-bg {
+        width: 32%;
+        height: 640px;
+    }
+
+    .homepage-spirit .gallery .food-bg {
+        width: 28%;
+        height: 480px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .homepage-spirit .gallery ul li.vertical-img {
+        width: 195px;
+        @include transition;
+
+        &:nth-child(3n+2){
+            margin-right: 0;
+        }
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.large {
+        width: 195px;
+        height: 40vh !important;
+        margin-left: 10px;
+        @include transition;
+        margin-right: 0;
+    }
+
+    .rtl .homepage-spirit .gallery ul li.horizontal-img.large {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.small {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1030px){
+    .homepage-intro .left-side-img {
+        width: 26%;
+        height: 500px;
+        @include transition;
+    }
+
+    .homepage-about .about-img img {
+        width: 370px;
+    }
+}
+
+@media only screen and (max-width: 970px){
+    .homepage-about .about-img img {
+        width: 330px;
+    }
+
+    .homepage-about .about-img::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    .homepage-spirit .gallery ul li.vertical-img, 
+    .homepage-spirit .gallery ul li.horizontal-img.small {
+        width: 170px;
+        @include transition;
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.large {
+        width: 170px;
+        @include transition;
+    }
+
+    .homepage-spirit .gallery .food-bg {
+        height: 410px;
+        padding-top: 73px;
+        margin-top: -73px;
+    }
+
+    .homepage-spirit .gallery .diy-bg {
+        height: 518px;
+        padding-top: 130px;
+        margin-top: -130px;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .homepage-intro .left-side-img {
+        height: 450px;
+    }
+    
+    .homepage-articles .articles-section{
+        flex-direction: column;
+    }
+
+    .homepage-articles .articles-col article .article-card,
+    .homepage-articles .articles-col{
+        width: 100%;
+    }
+
+    .homepage-articles .feeds-col {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .homepage-articles .articles-col article .article-card figure {
+        width: 150px;
+    }
+
+    .fb_iframe_widget_fluid span {
+        height: 400px;
+        width: 100% !important;
+    }
+    
+    .fb_iframe_widget iframe {
+        width: 100% !important;
+    }
+
+    ._2p3a{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 840px){
+    .homepage-intro .left-side-img {
+        display: none;
+    }
+
+    .homepage-intro .intro-heading {
+        padding-left: 10%;
+    }
+
+    .rtl .homepage-intro .intro-heading {
+        padding-right: 10%;
+        padding-left: 0;
+    }
+
+    .homepage-intro .right-side-img {
+        width: 46%;
+    }
+
+    .homepage-about .about-mobile{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .homepage-about .about-desc .btn-mobile{
+        justify-content: center;
+        align-self: center;
+    }
+
+    .homepage-about .about-img {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .homepage-about .about-desc {
+        width: 100%;
+    }
+
+    .homepage-spirit .gallery ul li.vertical-img {
+        width: 300px;
+        height: 60vh;
+        margin-right: 0px;
+        @include transition;
+
+        &:nth-child(3n+2){
+            display: none;
+        }
+        &:nth-child(3n+3){
+            display: none;
+        }
+    }
+
+    .homepage-spirit .gallery ul li.horizontal-img.large {
+        display: none;
+    }
+
+    .homepage-spirit .gallery .treatment-bg,
+    .homepage-spirit .gallery .food-bg,
+    .homepage-spirit .gallery .spirit-bg,
+    .homepage-spirit .gallery .diy-bg {
+        display: none;
+    }
+
+    .footer .footer-mobile{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .container .footer-about,
+    .footer .container .footer-links,
+    .footer .container .footer-send-msg {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer .container .footer-send-msg .name-row, .footer .container .footer-send-msg .email-row {
+        width: 100%;
+    }
+
+    .footer .container .footer-bg {
+        width: 45%;
+        left: 28%;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    .homepage-spirit .gallery ul li.vertical-img {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .homepage-spirit .gallery .gallery-mobile{
+        display: none;
+    }
+
+    .homepage-spirit .spirit-desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .homepage-spirit .spirit-desc ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+}
+@media only screen and (max-width: 500px){
+
+    .homepage-about .about-img img {
+        width: 270px;
+    }
+
+    .homepage-about .about-img::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .homepage-subscribe .subscribe-form .form-desc form .form-row {
+        width: 100%;
+    }
+
+    .homepage-intro .right-side-img {
+        height: 343px;
+        background-position: 10px center !important;
+    }
+
+    .homepage-subscribe .subscribe-bg {
+        display: none;
+    }
+
+    .footer .container .footer-bg {
+        width: 60%;
+        left: 21%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    .homepage-articles .articles-col article .article-card{
+        flex-direction: column;
+    }    
+
+    .homepage-articles .articles-col article .article-card figure{
+        width: 100%;
+        height: 100px;
+    }
+}

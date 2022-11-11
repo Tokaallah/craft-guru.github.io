@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// BOOK DOWNLOAD PAGE
+// -----------------------------------------------------------------------------
+.book-download{
+
+    .book-download-mobile{
+
+        .book-cover{
+            width: 25%;
+
+            figure{
+                width: 100%;
+                height: 400px;
+                margin: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .book-desc{
+            width: 70%;
+
+            ul{
+                li{
+                    font-size: 1.5em;
+                    color: $accent-color;
+
+                    span{
+                        color: $tertiary-color;
+                    }
+                }
+            }
+
+            form{
+                width: 50%;
+
+                span{
+                    color: $secondary-color;
+                    font-size: 1.1em;
+                }
+            }
+
+            .download-btn{
+                width: 50%;
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// BOOK DOWNLOAD PAGE RTL
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// BOOK DOWNLOAD PAGE RESPONSIVE
+// -----------------------------------------------------------------------------
+@media only screen and (max-width: 950px){
+    .book-download .book-download-mobile{
+        justify-content: center;
+    }
+
+    .book-download .book-download-mobile .book-cover {
+        width: 55%;
+        margin-bottom: 20px;
+    }
+
+    .book-download .book-download-mobile .book-desc {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .book-download .book-download-mobile .book-cover {
+        width: 80%;
+    }
+}
